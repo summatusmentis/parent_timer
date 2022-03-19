@@ -7,6 +7,7 @@ function startParentTimer() {
     update_rate = int(int((int(parent_time) * 60) / (int(kid_time) * 60)) / 1000)
     timerInterval = setInterval(()=> {updateTimer()},update_rate)
     
+    document.getElementById("timer") = kid_time + ":00";
 }
 
 function resetParentTimer() {
