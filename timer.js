@@ -1,4 +1,5 @@
-function startParentTimer() {
+var collapse_div = document.getElementById("collapseExample");
+collapseDiv.addEventListener('hidden.bs.collapse', function () {
     parent_time = document.getElementById("parentTimer").value;
     kid_time = document.getElementByid("kidTime").value;
     // if both were set to 60s, parent_time / kid_time would be 1000 ms
@@ -9,14 +10,13 @@ function startParentTimer() {
     alert(update_rate);
     
     document.getElementById("timer").innerHTML = kid_time + ":00";
-}
+});
 
-function resetParentTimer() {
+collapseDiv.addEventListener('hidden.bs.collapse', function () {
     alert("resetting");
     clearInterval(timerInterval);
     document.getElementById("timer").innerHTML = "0:00";
-
-}
+});
 
 function updateTimer() {
     timerString = document.getElementById("timer").value;
