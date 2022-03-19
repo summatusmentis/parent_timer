@@ -7,12 +7,12 @@ function startParentTimer() {
     update_rate = int(int((int(parent_time) * 60) / (int(kid_time) * 60)) / 1000)
     timerInterval = setInterval(()=> {updateTimer()},update_rate)
     
-    document.getElementById("timer") = kid_time + ":00";
+    document.getElementById("timer").innerHTML = kid_time + ":00";
 }
 
 function resetParentTimer() {
     clearInterval(timerInterval)
-    document.getElementById("timer") = "0:00"
+    document.getElementById("timer").innerHTML = "0:00"
 
 }
 
@@ -29,5 +29,5 @@ function updateTimer() {
         seconds--;
     }
     
-    document.getElementById("timer") = minutes + ":" + seconds;
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 }
