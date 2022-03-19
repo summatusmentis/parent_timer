@@ -12,6 +12,7 @@ function startParentTimer() {
 }
 
 function resetParentTimer() {
+    alert("resetting");
     clearInterval(timerInterval);
     document.getElementById("timer").innerHTML = "0:00";
 
